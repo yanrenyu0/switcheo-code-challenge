@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <title>Fancy Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div id="loading" class="loading">Loading...</div>
+  <div id="content" style="display: none;">
+    <form onsubmit="return false">
+      <h5>Swap</h5>
+      <div class="swapbox">
+        <div class="dropdown" id="sendToken">
+          <button onclick="toggleSendDropdown()" class="dropbtn" id="senddropbtn">Select a token</button>
+          <div id="sendToken_dropdown" class="dropdown-content"></div>
+        </div>
+        <div class="inputField">
+          <input class="transparentInput" id="send-amount" type="number" step="any" value="0.00" />
+          <div id="send-amount-price" class="amountPrice">Send</div>
+        </div>
+      </div>
+      <div class="swapbox">
+        <div class="dropdown" id="receiveToken">
+          <button onclick="toggleReceiveDropdown()" class="dropbtn" id="receivedropbtn">Select a token</button>
+          <div id="receiveToken_dropdown" class="dropdown-content"></div>
+        </div>
+        <div class="inputField">
+          <input class="transparentInput" id="receive-amount" type="number" step="any" value="0.00" />
+          <div id="receive-amount-price" class="amountPrice">Receive</div>
+        </div>
+      </div>
+      <div id="exchangeRate"></div>
+      <button id="confirmButton" onclick="confirmSubmit()">Confirm Swap</button>
+      <div id="toast" class="toast"></div>
+
+    </form>
+    <script src="script.js"></script>
+  </div>
+
+</body>
+
+</html>
